@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+section{
+    background-color: rgb(245, 245, 245);
+}
+
+.title{
+font-size: 76px;
+margin-bottom: 12px;
+text-align: left;
+line-height: 1;
+}
+
+
+p{
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 
+
+Landing Page
+
+*/
+
+#landing__page{
+    min-height: 100vh; /* This makes it so you cant go to the next section without event listener */
+}
+
+.skyblue{
+    color:#87ceeb ;
+}
+
+.header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%; /* this makes it responsive code */
+    max-width: 1000px;
+}
+
+.header__para{ /* how to properly select nested values */
+    font-size: 20px;
+    line-height: 2;
+    max-width: 450px;
+}
+
+/* .social__links */
+
+/* 
+
+NAVIGATION
+
+*/
+
+#personal-logo{
+    filter: invert(1);
+    width: 50px;
+    height: 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+}
+.nav__link--list{
+    display: flex;
+}
+
+.nav__link{
+    margin: 0 12px;
+}
+
+.nav__link--anchor{
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+}
+
+.fa-circle-half-stroke{
+ font-size: 20px;   
+}
+
