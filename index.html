@@ -40,7 +40,7 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link click">
             <a
               href="#"
               class="nav__link--anchor link__hover--effect link__hover-effect--black"
@@ -54,20 +54,123 @@
           <h1 class="title">Hey</h1>
           <h1 class="title skyblue"><b class="skyblue">I'm Kade</b></h1>
           <p class="header__para">
-            (put whatever you are applying too in here --> example)
             <b class="skyblue">I'm a Frontend Software Engineer </b> with a
             strong passion for building web applications with great user
             experiances.
             <br />
             Heres a bit more <b class="skyblue">about me</b>
           </p>
-          <div class="social__lists">
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
-            <a href=""><i class="fa-regular fa-file-pdf"></i></a>
+          <div class="social__list">
+            <a
+              href="https://www.linkedin.com/in/kadekorn/"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/KadeKorn"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="./assets/KadeKorn.pdf"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-regular fa-file-pdf"></i
+            ></a>
           </div>
         </div>
       </header>
+      <button class="mail__btn click">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click">
+          <i class="fa-regular fa-computer-mouse-scrollwheel"></i>
+        </div>
+      </a>
     </section>
+    <section id="#projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="skyblue">projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <!--This is where you copy/paste to add more projects and have a clean root directory -->
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html,CSS,JavaScript, Vue, Vuex
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse commodi id nemo pariatur harum, ex et dolorum illo
+                    tempore voluptate, deleniti quo quos aliquid atque.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <!-- give padding to top and bottom -->
+        <div class="row">
+          <!-- give margin to left and right -->
+          <figure>
+            <img src="./assets/logo.svg" alt="" />
+          </figure>
+          <div class="fiiter__social--list">
+            <a
+              href="#"
+              class="footer__social--link liver__hover-effect liver__hover-effect--white"
+            >
+              Github
+            </a>
+            <a
+              href="#"
+              class="footer__social--link liver__hover-effect liver__hover-effect--white"
+            >
+              Linkedin
+            </a>
+            <a
+              href="#landing__page"
+              class="footer__social--link liver__hover-effect liver__hover-effect--white"
+            >
+              Contact
+            </a>
+            <a
+              href="#"
+              class="footer__social--link liver__hover-effect liver__hover-effect--white"
+            >
+              Resume
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">Copyright © 2023 Kade Korn</div>
+    </footer>
   </body>
 </html>
