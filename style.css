@@ -64,11 +64,44 @@ button {
   color: #87ceeb;
 }
 
-.link__hover-effect{
+input,
+textarea {
+  width: 100%;
+  background-color: #242424;
+  color: #fff;
+  outline: none;
+  border: 3px solid #c0c4cc;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 300ms ease;
+}
+
+textarea {
+  resize: vertical; /* this makes it so you cant do funky resizing */
+  height: 100px;
+  margin-top: 8px;
+}
+
+input:hover, textarea:hover {
+  border-color: #dcdcdc;
+}
+
+input:focus, textarea:focus{
+  border-color: #f06449;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.link__hover-effect {
   position: relative;
 }
 
-.link__hover-effect::after{
+.link__hover-effect::after {
   content: "";
   position: absolute;
   bottom: -3px;
@@ -78,14 +111,14 @@ button {
   transition: all 300ms ease;
 }
 
-.link__hover-effect--white::after{
+.link__hover-effect--white::after {
   background-color: #fff;
 }
-.link__hover-effect--black::after{
+.link__hover-effect--black::after {
   background-color: #242424;
 }
 
-.link__hover-effect:hover:after{
+.link__hover-effect:hover:after {
   left: 0;
   width: 100%;
 }
@@ -99,7 +132,6 @@ Landing Page
 #landing-page {
   min-height: 100vh; /* This makes it so you cant go to the next section without event listener */
 }
-
 
 .header {
   position: absolute;
@@ -232,87 +264,94 @@ Modal
 
 */
 
-.modal{ /* this is to position it centrally */
+.modal {
+  /* this is to position it centrally */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgb(0,0,0, .55);
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
 }
 
-.modal__half{
+.modal__half {
   width: 50%;
   padding: 40px 72px;
-}
-
-.modal__about{
-  background-color: rgb(245,245,245);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
-.modal__languages{
+.modal__about {
+  background-color: rgb(245, 245, 245);
+}
+
+.modal__languages {
   display: flex;
   flex-wrap: wrap; /* This starts a new row if you have more than 4*/
 }
 
-.modal__language{
+.modal__language {
   width: 25%;
-  padding: 16px 
+  padding: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease;
 }
 
-.modal__language--img{
+.modal__language:hover .language__name {
+  /* this makes it 'unhidden' when hovered */
+  transform: scale(1);
+}
+
+.modal__language:hover {
+  /* this dims the 'brightness' of the images and makes them 'pop' a bit more */
+  filter: brightness(80%);
+  transform: scale(0.9);
+}
+
+.language__name {
+  position: absolute;
+  bottom: -10px; /*  If position: absolute; or position: fixed; - the bottom property sets the bottom edge of an element to a unit above/below the bottom edge of its nearest positioned ancestor.  */
+  transform: scale(0); /* this makes it 'hidden' */
+  transition: all 300ms ease;
+}
+
+.modal__language--img {
   width: 100%; /* This sets the width of the parent, so its not massive   */
 }
 
-.modal__title{
+.modal__title {
   font-size: 26px;
 }
-.modal__subtitle{
+.modal__subtitle {
   margin: 12px 0 24px 0;
+  font-size: 14px;
 }
 
-.modal__para{
+.modal__para {
   line-height: 1.75;
   margin-bottom: 12px;
 }
 
-.modal__contact{
+.modal__contact {
   background-color: #242424;
   color: white;
 }
 
-.form__item{
+.form__item {
   margin-bottom: 20px;
 }
 
-input,textarea{
-  width: 100%;
-  background-color: #242424;
-  color: #fff;
-  outline: none;
-  border: 3px solid #c0c4cc;
-  border-top:none;
-  border-left:none;
-  border-right:none;
-  height: 40px;
-  transition: all 300ms ease;
-}
-
-textarea{
-  resize: vertical;
-  height: 100px;
-  margin-top: 8px;
-}
-
-.form__submit{
+.form__submit {
   border-radius: 6px;
   background-color: #f06449;
   border: 2px solid #f06449;
@@ -320,12 +359,59 @@ textarea{
   font-weight: 700;
   width: 100%;
   max-width: 240px;
-  padding: 12px 24px;
+  padding: 12px 24px; /* adds the height for us*/
   font-size: 20px;
   transition: all 300ms ease;
 }
 
+.form__submit:hover{
+  border-color: #fff;
+  background-color: transparent;
+}
 
+.form__submit:active{
+  border-color: #f06449;
+  color: #f06449;
+}
+
+.modal__overlay{ /* This is why we use a common class, so we can put the same css properties within  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__overlay--loading{
+  background-color: #242424;
+  font-size: 80px;
+  z-index: -1;
+}
+
+
+.modal__overlay--success{
+ background-color: #4bb543;
+ font-size: 40px;
+ font-weight: 700;
+ text-align: center;
+ padding:20px
+}
+
+.fa-spinner{
+  animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
 /* 
 
 PROJECTS
@@ -338,7 +424,7 @@ PROJECTS
   margin-bottom: 60px;
 }
 
-.project{
+.project {
   margin-bottom: 10%;
 }
 
@@ -347,7 +433,7 @@ PROJECTS
   filter: blur(5px);
 }
 
-.project:last-child{
+.project:last-child {
   margin-bottom: 0;
 }
 
