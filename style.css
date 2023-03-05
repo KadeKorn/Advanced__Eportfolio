@@ -30,6 +30,7 @@ section {
 
 .click {
   transition: 300ms ease all;
+  cursor: pointer;
 }
 
 .click:hover {
@@ -397,8 +398,23 @@ Modal
  font-size: 40px;
  font-weight: 700;
  text-align: center;
- padding:20px
+ padding:20px;
+ z-index: -1;
 }
+
+.modal__overlay--visible{
+z-index: 1;
+}
+
+.modal__exit{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  z-index: 100;
+}
+
 
 .fa-spinner{
   animation: spinner 750ms infinite linear;
