@@ -6,7 +6,7 @@ function contact(event) {
   event.preventDefault(); // this stops form from immediately refreshing the page
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
-
+  loading.classList += " modal__overlay--visible";
   emailjs
     .sendForm(
       "service_un844bj",
@@ -14,7 +14,7 @@ function contact(event) {
       event.target,
       "uJjAf7G8kBbZURrbj"
     ).then(() => {
-        throw new Error("error") // <-- this is for testing out error feature
+      //throw new Error("error") // <-- this is for testing out error feature
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
     }).catch(() => {
@@ -23,10 +23,16 @@ function contact(event) {
             "The email service is temporarily unavailable. Please contanct me directly at 'kadekorn@.com'"
         )
     });
-  loading.classList += " modal__overlay--visible";
-  setTimeout(() => {
-    console.log("it worked 1");
-  }, 1000);
 }
 
-console.log("test");
+
+let isModalOpen = false;
+function toggleModal(){
+    if (isModalOpen){
+        isModalOpen = false;
+        return document.body.classList.remove("modal--open")
+    }
+    isModalOpen = true;
+    document.body.classList += " modal--open";
+    // toggle modal
+}
