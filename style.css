@@ -143,6 +143,33 @@ nav,
   transition: all 400ms ;
 }
 
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para{
+  color: white;
+}
+.dark-theme section{
+  background-color: #242424;
+}
+.dark-theme #personal-logo{
+  filter: none;
+}
+.dark-theme .scroll__icon{
+  border-color: white;
+}
+.dark-theme .scroll__icon::after,
+.dark-theme .link__hover-effect--black::after{
+  background-color: white;
+}
+
+
+.dark-theme .mail__btn{
+  background-color: white;
+  color: #242424;
+}
 /* 
 
 Landing Page
@@ -246,8 +273,8 @@ NAVIGATION
 
 #personal-logo {
   filter: invert(1);
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 
 nav {
@@ -277,6 +304,8 @@ nav {
 .fa-circle-half-stroke {
   font-size: 20px;
 }
+
+
 
 /* 
 
@@ -491,6 +520,7 @@ PROJECTS
 
 .project__img {
   width: 100%;
+  /* border-radius: 10px; */
   transition: all 600ms ease;
 }
 
@@ -498,6 +528,7 @@ PROJECTS
   position: relative;
   border-radius: 20px;
   box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.45);
+  overflow: hidden;
 }
 
 .project__wrapper:hover .project__description {

@@ -1,6 +1,18 @@
-// template id "template_bjrp5fk"
-// service id "service_un844bj"
-// public key "uJjAf7G8kBbZURrbj"
+let isModalOpen = false;
+let contrastToggle = false;
+
+
+function toggleContrast(){
+    contrastToggle = !contrastToggle;
+    if(contrastToggle){
+        document.body.classList += " dark-theme";
+    }
+    else {
+        document.body.classList.remove("dark-theme")
+    }
+
+}
+
 
 function contact(event) {
   event.preventDefault(); // this stops form from immediately refreshing the page
@@ -26,7 +38,7 @@ function contact(event) {
 }
 
 
-let isModalOpen = false;
+
 function toggleModal(){
     if (isModalOpen){
         isModalOpen = false;
