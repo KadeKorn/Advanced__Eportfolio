@@ -520,7 +520,6 @@ PROJECTS
 
 .project__img {
   width: 100%;
-  /* border-radius: 10px; */
   transition: all 600ms ease;
 }
 
@@ -614,4 +613,66 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+}
+
+
+
+/*
+
+Shapes
+
+shapes on the first row
+height = 35vh
+
+shapes on the second row
+height = 70vh
+
+shapes on the third row
+height = 95vh
+
+col 1 = width of 5 vw
+col 2 = width of 50 vw
+col 3 = width of 80vw
+
+*/
+
+.shape{
+  position: fixed;
+}
+
+.shape--0{
+  top: 35vh;
+  left: 5vw;
+}
+.shape--1{
+  top: 35vh;
+  left: 50vw;
+}
+.shape--2{
+  top: 35vh;
+  left: 80vw;
+}
+.shape--3{
+  top: 70vh;
+  left: 5vw;
+}
+.shape--4{
+  top: 70vh;
+  left: 50vw;
+}
+.shape--5{
+  top: 70vh;
+  left: 80vw;
+}
+.shape--6{
+  top: 95vh;
+  left: 5vw;
+}
+.shape--7{
+  top: 95vh;
+  left: 50vw;
+}
+.shape--8{
+  top: 95vh;
+  left: 80vw;
 }
