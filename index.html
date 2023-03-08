@@ -28,7 +28,7 @@
           <img id="personal-logo" src="./assets/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -61,9 +61,8 @@
           <h1 class="title">Hey</h1>
           <h1 class="title skyblue"><b class="skyblue">I'm Kade</b></h1>
           <p class="header__para">
-            <b class="skyblue">I'm a Frontend Software Engineer </b> with a
-            strong passion for building web applications with great user
-            experiances.
+            <b class="skyblue">I'm a SalesForce Developer </b> with a strong
+            passion for building applications with great user experiances.
             <br />
             Heres a bit more
             <b class="skyblue click" onclick="toggleModal()">about me</b>
@@ -90,10 +89,12 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
-      <a href="projects" class="scroll">
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
+      <a href="#projects" class="scroll">
         <div class="scroll__icon click">
           <i class="fa-regular fa-computer-mouse-scrollwheel"></i>
         </div>
@@ -104,17 +105,17 @@
             Here's a bit about me.
           </h3>
           <h4 class="modal__subtitle modal__sub-title--about">
-            Frontend Software Engineer
+            SalesForce Developer
           </h4>
           <p class="modal__para">
             I'm a 21 year-old
-            <span class="skyblue">frontend software engineer</span> with a
-            strong passion for developing websites with great
+            <span class="skyblue">SalesForce Developer</span> with a strong
+            passion for developing Orgs with great
             <span class="skyblue">user experiances.</span>
             <br />
             <!--Sell yourself here -->
             Currently I work on complex problems for a large company and learn
-            from a <span class="skyblue">talented team</span> with over 20 years
+            from a <span class="skyblue">talented team</span> with over 50 years
             of experience across them all
           </p>
           <div class="modal__languages">
@@ -331,7 +332,8 @@
               Linkedin
             </a>
             <a
-              href="landing__page"
+              href="#"
+              onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Contact

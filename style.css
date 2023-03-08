@@ -7,6 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 li {
   list-style-type: none;
 }
@@ -223,9 +227,11 @@ Landing Page
   border: none;
   background-color: #242424;
   color: white;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {
@@ -604,7 +610,7 @@ footer {
   width: 70px;
 }
 
-.footer__logo--popper {
+/* .footer__logo--popper {
   position: absolute;
   right: 0;
   top: 16px;
@@ -612,7 +618,7 @@ footer {
   opacity: 0;
   transition: all 300ms ease;
   color: white;
-}
+} */
 
 .footer__social--list {
   width: 100%;
@@ -624,6 +630,7 @@ footer {
 .footer__social--link,
 .footer__copyright {
   color: white;
+  padding: 15px;
 }
 
 
@@ -718,3 +725,36 @@ COME BACK TO RE ARRANGE THESE THE WAY I WANT
     font-size: 20px;
   }
 }
+
+/* Small phones */
+@media (max-width:480px){
+  .title{
+    font-size: 52px;
+  }
+  .header-para{
+    font-size: 18px;
+  }
+  #personal-logo{
+    width: 55px;
+    height: 55px;
+  }
+  .nav__link:first-child{
+    display: none; 
+  }
+  .project__description--para{
+    display: none;
+  }
+  .project__description{
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title{
+    margin-bottom: 8px;
+  }
+  .modal__half{
+    padding: 40px;
+  }
+}
+      
