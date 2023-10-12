@@ -4,8 +4,8 @@ const scaleFactor = 1 / 20; // writing learn code
 
 function moveBackground(event) {
   const shapes = document.querySelectorAll(".shape");
-  const x = event.clientX * scaleFactor; // / 20;
-  const y = event.clientY * scaleFactor; // / 20;
+  const x = event.clientX * scaleFactor; // 20;
+  const y = event.clientY * scaleFactor; // 20;
 
   for (let i = 0; i < shapes.length; ++i) {
     const isOdd = i % 2 !== 0;
@@ -57,3 +57,5 @@ function toggleModal() {
   document.body.classList += " modal--open";
   // toggle modal
 }
+
+//Will update this but is good for now
